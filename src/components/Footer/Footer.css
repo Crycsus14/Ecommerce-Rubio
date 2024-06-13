@@ -1,3 +1,6 @@
 .footerContainer {
-  background-color: silver;
+  color: white;
+  width: 100%;
+  margin: 5px;
+  border-top: 2px solid rgb(97, 96, 96);
 }
