@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer  greeting={"Acá está tu nuevo 0Km"} />
+      <ItemListContainer  />
       <Footer />
     </>
   );
