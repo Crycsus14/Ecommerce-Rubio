@@ -16,3 +16,12 @@ body {
 h1 {
   font-size: 3rem;
 }
+.bodyContainer{
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  
+}

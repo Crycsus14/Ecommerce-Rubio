@@ -10,7 +10,7 @@ const NavBar = () => {
       <ul className="listaNavBar">
         <li>Autos</li>
         <li>Camionetas</li>
-        <li>Deportivos</li>
+        <li>Motos</li>
       </ul>
 
       <CartWidget />
