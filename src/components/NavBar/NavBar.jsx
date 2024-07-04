@@ -2,18 +2,25 @@ import CartWidget from "../CartWidget/CartWidget";
 import { GiCarKey } from "react-icons/gi";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ children }) => {
+  console.log(children);
+
   return (
-    <div className="navbarContainer">
-      <GiCarKey size={70}/>
+    <div>
+      <>
+        <div className="navbarContainer">
+          <GiCarKey size={70} />
 
-      <ul className="listaNavBar">
-        <li>Autos</li>
-        <li>Camionetas</li>
-        <li>Motos</li>
-      </ul>
+          <ul className="listaNavBar">
+            <li>Autos</li>
+            <li>Camionetas</li>
+            <li>Motos</li>
+          </ul>
 
-      <CartWidget />
+          <CartWidget />
+        </div>
+      </>
+      {children}
     </div>
   );
 };
