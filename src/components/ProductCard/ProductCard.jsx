@@ -6,10 +6,11 @@ import {
   Typography,
 } from "@mui/material";
 import { styles } from "./estilos";
+import { Link } from "react-router-dom";
 
-export const ProductCard = ({ title, brand, description, price, img }) => {
+export const ProductCard = ({ title, brand, description, price, img ,id}) => {
   return (
-    <Card sx={{ maxWidth: 400 }}>
+    <Card sx={styles.cards} >
       <CardActionArea>
         <CardMedia component="img" height="200" src={img} alt={title} />
         <CardContent sx={styles.textArea}>
@@ -25,6 +26,9 @@ export const ProductCard = ({ title, brand, description, price, img }) => {
           <Typography variant="body2" color="" align="center">
             {description}
           </Typography>
+          <Link to="" style={{textDecoration:"none"}} > <Typography gutterBottom variant="h5" component="div" align="center"sx={{color:"orange"}}>
+            Ver más
+          </Typography></Link>
         </CardContent>
       </CardActionArea>
     </Card>

@@ -8,10 +8,11 @@ body {
   background-color: #242424;
   background-image: linear-gradient(to bottom right, #242424, #283048, #242424);
   color: rgba(255, 255, 255, 0.87);
-  margin: 100px;
+  margin: 50px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:center;
+
 }
 
 h1 {
