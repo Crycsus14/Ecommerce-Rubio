@@ -7,7 +7,7 @@
   justify-content: space-between;
   gap: 10px;
   align-items: center;
-  border-bottom: 2px solid rgb(97, 96, 96);
+  border-bottom: 2px solid #283048;
 }
 .listaNavBar {
   list-style: none;
