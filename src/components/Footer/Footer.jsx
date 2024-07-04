@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footerContainer">
-      <Link to="/"><GiCarKey size={70} color="white" /></Link>
+      <Link to="/"><GiCarKey size={70} color="orange" /></Link>
       <Typography gutterBottom variant="h5" component="div" align="center">
         © Todos los derechos reservados
       </Typography>

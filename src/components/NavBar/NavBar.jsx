@@ -2,13 +2,15 @@ import CartWidget from "../CartWidget/CartWidget";
 import { GiCarKey } from "react-icons/gi";
 import "./NavBar.css";
 import { Link, Outlet } from "react-router-dom";
+import { Typography } from "@mui/material";
+import { styles } from "../ProductCard/estilos";
 
 export const NavBar = () => {
   return (
     <div>
       <>
         <div className="navbarContainer">
-          <Link to="/"><GiCarKey size={70} color="white"/></Link>
+          <Link to="/" ><GiCarKey size={70} color="orange"/></Link>
 
           <ul className="listaNavBar">
             <Link to="/category/Autos" style={{color:"white", textDecoration:"none"}}>Autos</Link>

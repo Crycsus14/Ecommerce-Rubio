@@ -1,3 +1,5 @@
+import { FaLeaf } from "react-icons/fa";
+
 export let styles = {
   textArea: {
     background: `linear-gradient(to top,#283048,#232526)`,
@@ -8,6 +10,7 @@ export let styles = {
   },
   carrito: {
     display: 'flex',
+
     justifyContent: 'center',
     alignItems: 'center',
   },
