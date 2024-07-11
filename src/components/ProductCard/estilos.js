@@ -8,6 +8,9 @@ export let styles = {
   cards: {
     maxWidth: 400,
   },
+  cards2:{
+  
+  },
   carrito: {
     display: 'flex',
 

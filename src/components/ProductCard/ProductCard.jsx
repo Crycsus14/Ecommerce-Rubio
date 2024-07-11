@@ -26,7 +26,7 @@ export const ProductCard = ({ title, brand, description, price, img ,id}) => {
           <Typography variant="body2" color="" align="center">
             {description}
           </Typography>
-          <Link to="" style={{textDecoration:"none"}} > <Typography gutterBottom variant="h5" component="div" align="center"sx={{color:"orange"}}>
+          <Link to={`/itemDetail/${id}`} style={{textDecoration:"none"}} > <Typography gutterBottom variant="h5" component="div" align="center"sx={{color:"orange"}}>
             Ver más
           </Typography></Link>
         </CardContent>
