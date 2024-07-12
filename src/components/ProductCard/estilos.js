@@ -8,14 +8,19 @@ export let styles = {
   cards: {
     maxWidth: 400,
   },
-  cards2:{
-  
-  },
+  cards2: {},
   carrito: {
-    display: 'flex',
+    display: "flex",
 
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
 
+  tituloLlave: {
+    color: "orange",
+    textDecoration: "none",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 };

@@ -10,7 +10,7 @@ export const NavBar = () => {
     <div>
       <>
         <div className="navbarContainer">
-          <Link to="/" ><GiCarKey size={70} color="orange"/></Link>
+          <Link to="/" style={styles.tituloLlave} ><GiCarKey color="orange" size={70} /> Program-autos </Link>
 
           <ul className="listaNavBar">
             <Link to="/category/Autos" style={{color:"white", textDecoration:"none"}}>Autos</Link>

@@ -1,13 +1,11 @@
 .navbarContainer {
   font-size: 1.5rem;
   display: flex;
-  width: 100%;
   height: 10vh;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #373f57;
   margin: 20px;
-  
 }
 .listaNavBar {
   list-style: none;
@@ -17,5 +15,5 @@
   justify-content: center;
   align-items: center;
   min-height: 10vh;
-  
 }
+/* los estilos del titulo estan en estilos.js */
