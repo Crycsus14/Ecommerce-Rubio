@@ -1,3 +1,4 @@
+import { Margin } from "@mui/icons-material";
 import { FaLeaf } from "react-icons/fa";
 
 export let styles = {
@@ -7,6 +8,7 @@ export let styles = {
   },
   cards: {
     maxWidth: 400,
+    margin: "20px",
   },
   cards2: {},
   carrito: {
