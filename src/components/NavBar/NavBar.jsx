@@ -10,18 +10,34 @@ export const NavBar = () => {
     <div>
       <>
         <div className="navbarContainer">
-          <Link to="/" style={styles.tituloLlave} ><GiCarKey color="orange" size={70} /> Program-autos </Link>
+          <Link to="/" style={styles.tituloLlave}>
+            <GiCarKey color="orange" size={70} /> Program-autos{" "}
+          </Link>
 
           <ul className="listaNavBar">
-            <Link to="/category/Autos" style={{color:"white", textDecoration:"none"}}>Autos</Link>
-            <Link to="/category/Camionetas" style={{color:"white", textDecoration:"none"}}>Camionetas</Link>
-            <Link to="/category/Motos"style={{color:"white", textDecoration:"none"}}>Motos</Link>
+            <Link
+              to="/category/Autos"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Autos
+            </Link>
+            <Link
+              to="/category/Camionetas"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Camionetas
+            </Link>
+            <Link
+              to="/category/Motos"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Motos
+            </Link>
           </ul>
 
           <CartWidget />
         </div>
       </>
-      <Outlet />
     </div>
   );
 };
