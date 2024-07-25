@@ -8,7 +8,7 @@ import {
 import CounterContainer from "../../components/Counter/CounterContainer";
 import { styles } from "../../components/ProductCard/estilos";
 
-const ItemDetail = ({ item, title }) => {
+const ItemDetail = ({ item, title, onAdd }) => {
   return (
     <>
       <div>
@@ -47,7 +47,7 @@ const ItemDetail = ({ item, title }) => {
           </CardActionArea>
         </Card>
 
-        <CounterContainer />
+        <CounterContainer onAdd={onAdd} />
       </div>
     </>
   );

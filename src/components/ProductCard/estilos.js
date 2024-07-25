@@ -25,4 +25,9 @@ export let styles = {
     justifyContent: "center",
     alignItems: "center",
   },
+  counterStyles: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 };
