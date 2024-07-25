@@ -7,8 +7,10 @@ const Cart = () => {
       <Typography sx={styles.carrito} variant="h2">
         Aqui va el Carrito
       </Typography>
-      <Link to="/">
-        <Button variant="contained">Finalizar compra</Button>
+      <Link to="/Checkout">
+        <Button variant="contained" color="warning">
+          Finalizar compra
+        </Button>
       </Link>
     </div>
   );
