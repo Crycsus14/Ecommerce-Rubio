@@ -8,13 +8,13 @@ import {
 import CounterContainer from "../../components/Counter/CounterContainer";
 import { styles } from "../../components/ProductCard/estilos";
 
-const ItemDetail = ({ item, title, onAdd }) => {
+const ItemDetail = ({ item, onAdd }) => {
   return (
     <>
       <div>
         <Card sx={styles.cards2}>
           <CardActionArea>
-            <CardMedia component="img" height="" src={item.img} alt={title} />
+            <CardMedia component="img" height="" src={item.img} alt={item.title} />
             <CardContent sx={styles.textArea}>
               <Typography
                 gutterBottom

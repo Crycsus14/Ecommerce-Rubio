@@ -3,7 +3,6 @@ import { ProductCard } from "../../components/ProductCard/ProductCard";
 import { styles } from "../../components/ProductCard/estilos";
 
 const ItemList = ({ items }) => {
-  console.log(items);
   return (
     <div>
       <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>

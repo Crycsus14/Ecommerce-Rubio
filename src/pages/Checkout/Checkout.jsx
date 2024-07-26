@@ -6,7 +6,7 @@ const Checkout = () => {
 
   const envioDeFormulario = (event) => {
     event.preventDefault();
-    console.log("se envio el formulario");
+    console.log(user);
   };
 
   const handleChange = (event) => {

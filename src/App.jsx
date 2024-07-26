@@ -4,20 +4,26 @@ import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
 import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer";
 import Layout from "./components/Layout/Layout";
 import Checkout from "./pages/Checkout/Checkout";
+import CartContextProvider from "./context/CartContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:name" element={<ItemListContainer />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-          <Route path="/Checkout" element={<Checkout />} />
-        </Route>
-        <Route path="*" element={<h1> Ups algo salio mal: ERROR 404 Not found</h1>} />
-      </Routes>
+      <CartContextProvider>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/category/:name" element={<ItemListContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+            <Route path="/Checkout" element={<Checkout />} />
+          </Route>
+          <Route
+            path="*"
+            element={<h1> Ups algo salio mal: ERROR 404 Not found</h1>}
+          />
+        </Routes>
+      </CartContextProvider>
     </BrowserRouter>
   );
 }
