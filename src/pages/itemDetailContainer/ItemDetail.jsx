@@ -8,13 +8,18 @@ import {
 import CounterContainer from "../../components/Counter/CounterContainer";
 import { styles } from "../../components/ProductCard/estilos";
 
-const ItemDetail = ({ item, onAdd }) => {
+const ItemDetail = ({ item, onAdd, initial }) => {
   return (
     <>
       <div>
         <Card sx={styles.cards2}>
           <CardActionArea>
-            <CardMedia component="img" height="" src={item.img} alt={item.title} />
+            <CardMedia
+              component="img"
+              height=""
+              src={item.img}
+              alt={item.title}
+            />
             <CardContent sx={styles.textArea}>
               <Typography
                 gutterBottom
@@ -38,7 +43,7 @@ const ItemDetail = ({ item, onAdd }) => {
                 component="div"
                 align="center"
               >
-                {item.price}
+                 ${item.price} USD
               </Typography>
               <Typography variant="body2" color="" align="center">
                 {item.description}
@@ -47,7 +52,7 @@ const ItemDetail = ({ item, onAdd }) => {
           </CardActionArea>
         </Card>
 
-        <CounterContainer onAdd={onAdd} />
+        <CounterContainer onAdd={onAdd} stock={item.stock} initial={initial} />
       </div>
     </>
   );

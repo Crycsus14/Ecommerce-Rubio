@@ -12,7 +12,9 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 const Cart = () => {
-  const { cart, clearCart, deleteProduct } = useContext(CartContext);
+  const { cart, clearCart, deleteProduct, getTotalPrice } =
+    useContext(CartContext);
+  let total = getTotalPrice();
 
   return (
     <div>
@@ -29,8 +31,11 @@ const Cart = () => {
                 />
                 <CardContent sx={styles.textArea}>
                   <Typography variant="h2">Modelo:{elemento.title}</Typography>
-                  <Typography variant="h2">
+                  <Typography variant="h3">
                     Cantidad:{elemento.quantity}
+                  </Typography>
+                  <Typography variant="h4">
+                    Precio Unitario: ${elemento.price} USD
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -47,10 +52,18 @@ const Cart = () => {
       <div
         style={{
           display: "flex",
+          flexDirection: "wrap",
           justifyContent: "space-around",
           alignItems: "center",
+          gap: "20px",
         }}
       >
+        <Typography
+          variant="h2"
+          className={cart.length > 0 ? "title" : "ocultar"}
+        >
+          El total a pagar es: ${total} USD
+        </Typography>
         <Button variant="outlined" color="warning" onClick={clearCart}>
           Limpiar carrito
         </Button>

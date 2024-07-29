@@ -21,7 +21,7 @@ export const ProductCard = ({ title, brand, description, price, img ,id}) => {
             {brand}
           </Typography>
           <Typography gutterBottom variant="h5" component="div" align="center">
-            {price}
+           ${price} USD
           </Typography>
           <Typography variant="body2" color="" align="center">
             {description}
