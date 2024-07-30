@@ -1,4 +1,4 @@
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, Link } from "@mui/material";
 import { useState } from "react";
 
 const Checkout = () => {
@@ -16,9 +16,9 @@ const Checkout = () => {
 
   return (
     <>
-      <Typography variant="h2">Aca va el forms</Typography>
+      <Typography variant="h2">Formulario de contacto</Typography>
 
-      <form onSubmit={envioDeFormulario}>
+      <form onSubmit={envioDeFormulario} >
         <input
           type="text"
           placeholder="Ingresa tu nombre completo"
@@ -37,8 +37,10 @@ const Checkout = () => {
           onChange={handleChange}
           name="telefono"
         />
-        <Button  variant="contained" color="warning" type="submit"> Enviar</Button>
-        <Button variant="outlined" color="primary" type="button"> Cancelar</Button>
+
+        <Button variant="contained" color="warning" type="submit">
+          Enviar
+        </Button>
       </form>
     </>
   );

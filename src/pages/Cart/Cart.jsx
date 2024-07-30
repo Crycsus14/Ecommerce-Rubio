@@ -10,15 +10,39 @@ import { styles } from "../../components/ProductCard/estilos";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const { cart, clearCart, deleteProduct, getTotalPrice } =
     useContext(CartContext);
   let total = getTotalPrice();
-  
-  const handleDelete = (id) => {
 
-  }
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Seguro quieres eliminar el articulo?",
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonColor: "#DB2E1D",
+      denyButtonColor: "#1A80D9",
+      confirmButtonText: "Borrar",
+      denyButtonText: `no,no borrar`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Eliminado correctamente",
+          icon: "success",
+          confirmButtonColor: "#1A80D9",
+        });
+        deleteProduct(id);
+      } else if (result.isDenied) {
+        Swal.fire({
+          title: "No se ha eliminado",
+          icon: "info",
+          confirmButtonColor: "#1A80D9",
+        });
+      }
+    });
+  };
 
   return (
     <div>
