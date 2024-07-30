@@ -37,8 +37,8 @@ const Checkout = () => {
           onChange={handleChange}
           name="telefono"
         />
-        <Button type="submit"> Enviar</Button>
-        <Button type="button"> Cancelar</Button>
+        <Button  variant="contained" color="warning" type="submit"> Enviar</Button>
+        <Button variant="outlined" color="primary" type="button"> Cancelar</Button>
       </form>
     </>
   );

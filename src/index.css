@@ -12,10 +12,30 @@ body {
   margin: 50px;
   display: flex;
   justify-content: center;
-  align-items:center;
-
+  align-items: center;
 }
 
 h1 {
   font-size: 3rem;
+}
+
+.estilosItemList {
+  display: flex;
+  gap: 20px;
+}
+
+@media (min-width: 430px) and (max-width: 770px) {
+  .estilosItemList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 771px) {
+  .estilosItemList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }

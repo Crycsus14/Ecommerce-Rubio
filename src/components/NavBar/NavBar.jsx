@@ -11,7 +11,7 @@ export const NavBar = () => {
       <>
         <div className="navbarContainer">
           <Link to="/" style={styles.tituloLlave}>
-            <GiCarKey color="orange" size={70} /> Program-autos{" "}
+            <GiCarKey color="#F25C05" size={70} /> Program-autos{" "}
           </Link>
 
           <ul className="listaNavBar">

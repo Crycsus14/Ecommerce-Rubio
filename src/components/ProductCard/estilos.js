@@ -1,6 +1,3 @@
-import { Margin } from "@mui/icons-material";
-import { FaLeaf } from "react-icons/fa";
-
 export let styles = {
   textArea: {
     background: `linear-gradient(to top,#283048,#232526)`,
@@ -13,13 +10,12 @@ export let styles = {
   cards2: {},
   carrito: {
     display: "flex",
-
     justifyContent: "center",
     alignItems: "center",
   },
 
   tituloLlave: {
-    color: "orange",
+    color: "#F25C05",
     textDecoration: "none",
     display: "flex",
     justifyContent: "center",

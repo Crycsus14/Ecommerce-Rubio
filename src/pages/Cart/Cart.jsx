@@ -15,6 +15,10 @@ const Cart = () => {
   const { cart, clearCart, deleteProduct, getTotalPrice } =
     useContext(CartContext);
   let total = getTotalPrice();
+  
+  const handleDelete = (id) => {
+
+  }
 
   return (
     <div>
@@ -42,7 +46,7 @@ const Cart = () => {
             </Card>
             <Button
               variant="contained"
-              onClick={() => deleteProduct(elemento.id)}
+              onClick={() => handleDelete(elemento.id)}
             >
               Eliminar
             </Button>
@@ -58,20 +62,19 @@ const Cart = () => {
           gap: "20px",
         }}
       >
-        <Typography
-          variant="h2"
-          className={cart.length > 0 ? "title" : "ocultar"}
-        >
-          El total a pagar es: ${total} USD
-        </Typography>
-        <Button variant="outlined" color="warning" onClick={clearCart}>
-          Limpiar carrito
-        </Button>
-        <Link to="/Checkout">
-          <Button variant="contained" color="warning">
-            Finalizar compra
+        <Typography variant="h2">El total a pagar es: ${total} USD</Typography>
+        {cart.length > 0 && (
+          <Button variant="outlined" color="warning" onClick={clearCart}>
+            Limpiar carrito
           </Button>
-        </Link>
+        )}
+        {cart.length > 0 && (
+          <Link to="/Checkout">
+            <Button variant="contained" color="warning">
+              Finalizar compra
+            </Button>
+          </Link>
+        )}
       </div>
     </div>
   );
