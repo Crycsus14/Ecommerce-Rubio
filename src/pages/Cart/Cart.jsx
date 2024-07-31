@@ -25,7 +25,7 @@ const Cart = () => {
       confirmButtonColor: "#DB2E1D",
       denyButtonColor: "#1A80D9",
       confirmButtonText: "Borrar",
-      denyButtonText: `no,no borrar`,
+      denyButtonText: `No borrar`,
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
@@ -37,6 +37,33 @@ const Cart = () => {
       } else if (result.isDenied) {
         Swal.fire({
           title: "No se ha eliminado",
+          icon: "info",
+          confirmButtonColor: "#1A80D9",
+        });
+      }
+    });
+  };
+
+  const handleClearCart = (setCart) => {
+    Swal.fire({
+      title: "Seguro quieres limpiar el carrito?",
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonColor: "#DB2E1D",
+      denyButtonColor: "#1A80D9",
+      confirmButtonText: "Limpiar",
+      denyButtonText: `No limpiar`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Limpiado correctamente",
+          icon: "success",
+          confirmButtonColor: "#1A80D9",
+        });
+        clearCart(setCart([]));
+      } else if (result.isDenied) {
+        Swal.fire({
+          title: "No has limpiado el carrito",
           icon: "info",
           confirmButtonColor: "#1A80D9",
         });
@@ -88,7 +115,11 @@ const Cart = () => {
       >
         <Typography variant="h2">El total a pagar es: ${total} USD</Typography>
         {cart.length > 0 && (
-          <Button variant="outlined" color="warning" onClick={clearCart}>
+          <Button
+            variant="outlined"
+            color="warning"
+            onClick={() => handleClearCart(clearCart)}
+          >
             Limpiar carrito
           </Button>
         )}

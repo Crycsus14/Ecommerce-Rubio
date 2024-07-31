@@ -8,9 +8,9 @@ import {
 import { styles } from "./estilos";
 import { Link } from "react-router-dom";
 
-export const ProductCard = ({ title, brand, description, price, img ,id}) => {
+export const ProductCard = ({ title, brand, description, price, img, id }) => {
   return (
-    <Card sx={styles.cards} >
+    <Card sx={styles.cards}>
       <CardActionArea>
         <CardMedia component="img" height="200" src={img} alt={title} />
         <CardContent sx={styles.textArea}>
@@ -21,14 +21,22 @@ export const ProductCard = ({ title, brand, description, price, img ,id}) => {
             {brand}
           </Typography>
           <Typography gutterBottom variant="h5" component="div" align="center">
-           ${price} USD
+            ${price} USD
           </Typography>
           <Typography variant="body2" color="" align="center">
             {description}
           </Typography>
-          <Link to={`/itemDetail/${id}`} style={{textDecoration:"none"}} > <Typography gutterBottom variant="h5" component="div" align="center"sx={{color:"#F25C05"}}>
-            + Info
-          </Typography></Link>
+          <Link to={`/itemDetail/${id}`} style={{ textDecoration: "none" }}>
+            {" "}
+            <Typography
+              gutterBottom
+              variant="h5"
+              align="center"
+              sx={{ color: "#F25C05" }}
+            >
+              Click para más Info
+            </Typography>
+          </Link>
         </CardContent>
       </CardActionArea>
     </Card>
