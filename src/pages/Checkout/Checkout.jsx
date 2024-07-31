@@ -1,4 +1,4 @@
-import { Typography, Button, Link } from "@mui/material";
+import { Typography, Button} from "@mui/material";
 import { useState } from "react";
 
 const Checkout = () => {
