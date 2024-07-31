@@ -19,6 +19,17 @@ h1 {
   font-size: 3rem;
 }
 
+form {
+  padding: 50px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  background-color: #2d6ea788;
+  border-radius: 5%;
+}
+
 .estilosItemList {
   display: flex;
   gap: 20px;

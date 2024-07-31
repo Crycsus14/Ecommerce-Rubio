@@ -1,48 +1,67 @@
-import { Typography, Button} from "@mui/material";
-import { useState } from "react";
+import { TextField, Button } from "@mui/material";
+import "../../index.css";
+import { useFormik } from "formik";
+import Swal from "sweetalert2";
+import * as Yup from "yup";
+
 
 const Checkout = () => {
-  const [user, setUser] = useState({ nombre: "", email: "", telefono: "" });
-
-  const envioDeFormulario = (event) => {
-    event.preventDefault();
-    console.log(user);
-  };
-
-  const handleChange = (event) => {
-    let { name, value } = event.target;
-    setUser({ ...user, [name]: value });
-  };
+  const { handleSubmit, handleChange, values,errors } = useFormik({
+    initialValues: { nombre: "", email: "", telefono: "", provincia: "" },
+    onSubmit: (data) => {},
+  });
 
   return (
-    <>
-      <Typography variant="h2">Formulario de contacto</Typography>
-
-      <form onSubmit={envioDeFormulario} >
-        <input
+    <div>
+      <form onSubmit={handleSubmit}>
+        <TextField
+          variant="outlined"
+          color="warning"
           type="text"
-          placeholder="Ingresa tu nombre completo"
-          onChange={handleChange}
+          label="nombre"
           name="nombre"
-        />
-        <input
-          type="text"
-          placeholder="Ingresa tu email"
           onChange={handleChange}
+        />
+        <TextField
+          variant="outlined"
+          color="warning"
+          type="text"
+          label="email"
           name="email"
-        />
-        <input
-          type="text"
-          placeholder="Ingresa tu numero de telefono"
           onChange={handleChange}
-          name="telefono"
         />
-
-        <Button variant="contained" color="warning" type="submit">
+        <TextField
+          variant="outlined"
+          color="warning"
+          type="number"
+          label="telefono"
+          name="telefono"
+          onChange={handleChange}
+        />
+        <TextField
+          variant="outlined"
+          color="warning"
+          type="text"
+          label="provincia"
+          name="provincia"
+          onChange={handleChange}
+        />
+        <Button
+          variant="contained"
+          type="submit"
+          color="primary"
+          onClick={() => {
+            Swal.fire({
+              title: "Enviado correctamente",
+              icon: "success",
+              confirmButtonColor: "#1A80D9",
+            });
+          }}
+        >
           Enviar
         </Button>
       </form>
-    </>
+    </div>
   );
 };
 
