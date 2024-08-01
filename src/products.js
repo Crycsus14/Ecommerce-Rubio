@@ -1,6 +1,5 @@
 export let products = [
   {
-    id: 1,
     title: "Polo",
     brand: "Volkswagen",
     price: 11000,
@@ -11,7 +10,6 @@ export let products = [
     category: "Autos",
   },
   {
-    id: 2,
     title: "Amarok V6",
     brand: "Volkswagen",
     price: 49000,
@@ -22,7 +20,6 @@ export let products = [
     category: "Camionetas",
   },
   {
-    id: 3,
     title: "Duke - 200C",
     brand: "KTM",
     price: 8000,
@@ -33,7 +30,6 @@ export let products = [
     category: "Motos",
   },
   {
-    id: 4,
     title: "Corolla 2.0 XLI CVT",
     brand: "Toyota",
     price: 27000,
@@ -44,7 +40,6 @@ export let products = [
     category: "Autos",
   },
   {
-    id: 5,
     title: "Hilux",
     brand: "Toyota",
     price: 50000,
@@ -55,7 +50,6 @@ export let products = [
     category: "Camionetas",
   },
   {
-    id: 6,
     title: "Adventure 390 SW",
     brand: "KTM",
     price: 15000,
@@ -66,7 +60,6 @@ export let products = [
     category: "Motos",
   },
   {
-    id: 7,
     title: "Fiesta",
     brand: "Ford",
     price: 20000,
@@ -77,7 +70,6 @@ export let products = [
     category: "Autos",
   },
   {
-    id: 8,
     title: "Raptor 3.0",
     brand: "Ford",
     price: 90000,
@@ -88,7 +80,6 @@ export let products = [
     category: "Camionetas",
   },
   {
-    id: 9,
     title: "Rouser NS 200",
     brand: "BAJAJ",
     price: 5000,
@@ -99,7 +90,6 @@ export let products = [
     category: "Motos",
   },
   {
-    id: 10,
     title: "Yaris Hatchback",
     brand: "Toyota",
     price: 22000,
@@ -110,7 +100,6 @@ export let products = [
     category: "Autos",
   },
   {
-    id: 11,
     title: "Ranger",
     brand: "Ford",
     price: 75000,
@@ -121,7 +110,6 @@ export let products = [
     category: "Camionetas",
   },
   {
-    id: 12,
     title: "Dominar D400",
     brand: "BAJAJ",
     price: 7000,

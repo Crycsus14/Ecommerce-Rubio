@@ -9,7 +9,11 @@ const Checkout = () => {
   const { handleSubmit, handleChange, values,errors } = useFormik({
     initialValues: { nombre: "", email: "", telefono: "", provincia: "" },
     onSubmit: (data) => {
-
+      let order={
+        buyer: user,
+        items: cart,
+        total: total,
+      }
 
     },
 

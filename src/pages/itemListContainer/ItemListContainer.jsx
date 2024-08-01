@@ -88,8 +88,25 @@ const ItemListContainer = () => {
       </div>
     );
   }
+  
+  // const addProducts = () => {
+  //   let productsCollection = collection(db, "products");
 
-  return <ItemList items={items} />;
+  //   products.forEach((elemento) => {
+  //     addDoc(productsCollection, elemento);
+
+  //   })
+  // };
+
+  return (
+    <div>
+      {/* <Button variant="contained" onClick={addProducts}>
+        
+        Agregar productos
+      </Button> */}
+      <ItemList items={items} />
+    </div>
+  );
 };
 
 export default ItemListContainer;
