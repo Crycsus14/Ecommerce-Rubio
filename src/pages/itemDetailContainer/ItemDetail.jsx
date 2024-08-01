@@ -11,6 +11,7 @@ import { styles } from "../../components/ProductCard/estilos";
 const ItemDetail = ({ item, onAdd, initial }) => {
   return (
     <>
+      
       <div>
         <Card sx={styles.cards2}>
           <CardActionArea>
@@ -43,7 +44,7 @@ const ItemDetail = ({ item, onAdd, initial }) => {
                 component="div"
                 align="center"
               >
-                 ${item.price} USD
+                ${item.price} USD
               </Typography>
               <Typography variant="body2" color="" align="center">
                 {item.description}

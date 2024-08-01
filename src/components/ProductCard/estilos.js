@@ -1,4 +1,4 @@
-import { BorderColor } from "@mui/icons-material";
+import { BorderBottom, BorderColor, Padding } from "@mui/icons-material";
 
 export let styles = {
   textArea: {
@@ -28,5 +28,14 @@ export let styles = {
     justifyContent: "center",
     alignItems: "center",
   },
-  
+  estiloTitulo: {
+    display: "flex",
+    flexDirection: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    borderBottom:"2px solid #373f57",
+    margin: "15px",
+    
+    
+  },
 };

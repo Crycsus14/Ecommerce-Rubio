@@ -1,10 +1,16 @@
-import { Grid } from "@mui/material";
+import { Grid,Typography } from "@mui/material";
 import { ProductCard } from "../../components/ProductCard/ProductCard";
 import { styles } from "../../components/ProductCard/estilos";
 
 const ItemList = ({ items }) => {
   return (
-    <div>
+    <>
+      <div>
+        <Typography variant="h2"  color="#ffffff" sx={styles.estiloTitulo}>
+          Bienvenido a tu consecionario online
+        </Typography>
+      </div>
+      <div>
       <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         {items.map((elemento) => {
           return (
@@ -21,7 +27,8 @@ const ItemList = ({ items }) => {
           );
         })}
       </Grid>
-    </div>
+      </div>
+    </>
   );
 };
 
