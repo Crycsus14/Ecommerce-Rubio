@@ -1,6 +1,6 @@
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
-import ItemDetailContainer from "../pages/ItemDetailContainer/ItemDetailContainer";
+import ItemDetailContainer from "../pages/itemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "../pages/itemListContainer/ItemListContainer";
 
 export const routes = [
