@@ -8,7 +8,7 @@
 
 ### Realizado con:
 
-- Vite https://vitejs.dev/
+- Framework con Vite https://vitejs.dev/
 - React https://es.react.dev/
 - Para los iconos - React Icons https://react-icons.github.io/react-icons/
 - Libreria de Material UI https://mui.com/
@@ -17,6 +17,7 @@
 - Formulario con Formik https://formik.org/
 - Validaciones con Yup https://www.npmjs.com/package/yup
 - Base de datos con Firebase https://firebase.google.com/?hl=es
+- Deploy con Vercel https://vercel.com/
 
 #### Tecnologias:
 
@@ -26,6 +27,7 @@
 - JavaScript
 - JSON
 - NodeJS
+
 
 ```
 git clone https://github.com/Crycsus14/Ecommerce-Rubio.git

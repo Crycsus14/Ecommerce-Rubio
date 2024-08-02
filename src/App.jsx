@@ -15,9 +15,11 @@ function App() {
               return <Route key={id} path={path} element={<Element />} />;
             })}
           </Route>
+
           <Route element={<ProtectedRoutes />}>
             <Route path="/dashboard" element={<Dashboard />} />
           </Route>
+
           <Route
             path="*"
             element={<h1> Ups algo salio mal: ERROR 404 Not found</h1>}

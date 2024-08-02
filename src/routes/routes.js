@@ -26,7 +26,7 @@ export const routes = [
   },
   {
     id: 5,
-    path: "/Checkout",
+    path: "/checkout",
     Element: Checkout,
   },
 ];
