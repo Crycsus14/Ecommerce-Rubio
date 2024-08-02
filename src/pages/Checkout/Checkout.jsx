@@ -25,7 +25,7 @@ const Checkout = () => {
         items: cart,
         total: total,
       };
-      console.log(data);
+    
       let ordersCollection = collection(db, "orders");
 
       let productCollection = collection(db, "products");
@@ -64,7 +64,7 @@ const Checkout = () => {
     }),
     validateOnChange: false,
   });
-  console.log(errors);
+  
 
   return (
     <div>
