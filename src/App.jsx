@@ -5,6 +5,8 @@ import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer
 import Layout from "./components/Layout/Layout";
 import Checkout from "./pages/Checkout/Checkout";
 import CartContextProvider from "./context/CartContext";
+import ProtectedRoutes from "./routes/ProtectedRoutes";
+import Dashboard from "./pages/itemListContainer/dashboard/Dashboard";
 
 function App() {
   return (
@@ -18,6 +20,11 @@ function App() {
             <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
             <Route path="/Checkout" element={<Checkout />} />
           </Route>
+
+          <Route element= {<ProtectedRoutes/>} >
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
+
           <Route
             path="*"
             element={<h1> Ups algo salio mal: ERROR 404 Not found</h1>}

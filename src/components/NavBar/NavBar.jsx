@@ -6,6 +6,8 @@ import { Typography } from "@mui/material";
 import { styles } from "../ProductCard/estilos";
 
 export const NavBar = () => {
+
+  let rol = "admin";
   return (
     <div>
       <>
@@ -34,6 +36,16 @@ export const NavBar = () => {
               Motos
             </Link>
           </ul>
+
+          {rol === "admin" && (
+            <Link
+              Link
+              to="/dashboard"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Dashboard
+            </Link> 
+          )}
 
           <CartWidget />
         </div>
