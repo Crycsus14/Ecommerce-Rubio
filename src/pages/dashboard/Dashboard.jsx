@@ -1,4 +1,4 @@
-import { Box, Button, Link, Typography } from "@mui/material";
+import { Box, Button,  Link,  Typography } from "@mui/material";
 
 const Dashboard = () => {
   return (
@@ -15,9 +15,12 @@ const Dashboard = () => {
       <Typography variant="h2" color="#F25C05">
         Disculpe las molestias, página en construcción
       </Typography>
-      <Typography variant="button" ><Link to="/" style={{ color: "white", textDecoration: "none" }}> Volver al Home</Link></Typography>
+
+      <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+        <Button variant="contained" type="button"> Volver al Home</Button>
+      </Link>
+
     </Box>
-    
   );
 };
 

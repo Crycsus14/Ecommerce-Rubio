@@ -1,12 +1,9 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Cart from "./pages/Cart/Cart";
-import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
-import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer";
 import Layout from "./components/Layout/Layout";
-import Checkout from "./pages/Checkout/Checkout";
 import CartContextProvider from "./context/CartContext";
 import ProtectedRoutes from "./routes/ProtectedRoutes";
-import Dashboard from "./pages/itemListContainer/dashboard/Dashboard";
+import Dashboard from "./pages/dashboard/Dashboard";
+import { routes } from "./routes/routes";
 
 function App() {
   return (
@@ -14,17 +11,13 @@ function App() {
       <CartContextProvider>
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<ItemListContainer />} />
-            <Route path="/category/:name" element={<ItemListContainer />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-            <Route path="/Checkout" element={<Checkout />} />
+            {routes.map(({ id, path, Element }) => {
+              return <Route key={id} path={path} element={<Element />} />;
+            })}
           </Route>
-
-          <Route element= {<ProtectedRoutes/>} >
+          <Route element={<ProtectedRoutes />}>
             <Route path="/dashboard" element={<Dashboard />} />
           </Route>
-
           <Route
             path="*"
             element={<h1> Ups algo salio mal: ERROR 404 Not found</h1>}

@@ -1,9 +1,9 @@
-import { Typography } from "@mui/material";
-import { Outlet } from "react-router-dom";
+
+import { Navigate, Outlet } from "react-router-dom";
 
 const ProtectedRoutes = () => {
-    let rol = "admin";
-  return  rol === "admin" ? <Outlet /> : <Typography variant="h2"> Sin acceso </Typography>
+  let rol = "user";
+  return rol === "admin" ? <Outlet /> : <Navigate to="/" />;
 };
 
 export default ProtectedRoutes;

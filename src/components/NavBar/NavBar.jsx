@@ -7,7 +7,7 @@ import { styles } from "../ProductCard/estilos";
 
 export const NavBar = () => {
 
-  let rol = "admin";
+  let rol = "user";
   return (
     <div>
       <>
