@@ -45,7 +45,9 @@ const Checkout = () => {
         .catch()
         .finally(() => {
           clearCart();
-          navigate("/");
+          setTimeout(() => {
+            navigate("/");
+          }, 4000);
         });
     },
 
@@ -112,18 +114,7 @@ const Checkout = () => {
             error={errors.provincia ? true : false}
             helperText={errors.provincia}
           />
-          <Button
-            variant="contained"
-            type="submit"
-            color="primary"
-            // onClick={() => {
-            //   Swal.fire({
-            //     title: "Enviado correctamente",
-            //     icon: "success",
-            //     confirmButtonColor: "#1A80D9",
-            //   });
-            // }}
-          >
+          <Button variant="contained" type="submit" color="primary">
             Enviar
           </Button>
         </form>
