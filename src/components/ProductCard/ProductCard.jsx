@@ -23,7 +23,7 @@ export const ProductCard = ({ title, brand, description, price, img, id }) => {
           <Typography gutterBottom variant="h5" component="div" align="center">
             ${price} USD
           </Typography>
-          <Typography variant="body2" color="" align="center">
+          <Typography gutterBottom variant="body2" color="" align="center">
             {description}
           </Typography>
           <Link to={`/itemDetail/${id}`} style={{ textDecoration: "none" }}>
